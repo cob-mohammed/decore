@@ -6,230 +6,7 @@
     <title>SH Building & Decoration</title>
     <meta name="description" content="SH Building & Decoration هي شركة رائدة في الديكور والتصميم الداخلي تقدم حلول تصميم مبتكرة وشاملة.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            direction: rtl;
-            overflow-x: hidden;
-        }
-        header {
-            position: relative;
-            background: url('https://images.unsplash.com/photo-1514053026555-49ce8886ae41?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRlY29yfGVufDB8fDB8fHww') no-repeat center center/cover;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-            height: 500px;
-        }
-        header h1 {
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            overflow: hidden;
-        }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        h1, h2 {
-            color: #0056b3;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-            font-size: 0.9em;
-        }
-        li:before {
-            content: '•';
-            color: #0056b3;
-            position: absolute;
-            right: 0;
-        }
-        .lang-switcher {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .lang-switcher button {
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 0.9em;
-        }
-        .lang-switcher button:hover {
-            background-color: #003d7a;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #0056b3;
-            color: #fff;
-            transition: background-color 0.3s ease;
-            font-size: 0.9em;
-        }
-        footer:hover {
-            background-color: #003d7a;
-        }
-        .contact-form {
-            margin-top: 20px;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 0.9em;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s ease;
-            font-size: 0.9em;
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #0056b3;
-        }
-        .contact-form button {
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 0.9em;
-        }
-        .contact-form button:hover {
-            background-color: #003d7a;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .contact-info a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .social-icons {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            color: #333;
-            font-size: 1.5em;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #0056b3;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .gallery img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .gallery-links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .gallery-links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        .gallery-links a:hover {
-            background-color: #003d7a;
-        }
-        .testimonial-section {
-            background: #f9f9f9;
-            padding: 20px;
-            margin-bottom: 10px;
-        }
-        .testimonial {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .testimonial p {
-            margin: 0;
-        }
-        .newsletter-form {
-            background: #0056b3;
-            color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .newsletter-form input[type="email"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-        .newsletter-form button {
-            background: #ffd700;
-            color: #333;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .newsletter-form button:hover {
-            background: #ffcc00;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -250,10 +27,10 @@
 
         <section class="section gallery-links">
             <h2>معرض الصور</h2>
-            <a href="#room">غرف النوم</a>
-            <a href="#reception">الاستقبال</a>
-            <a href="#bathroom">الحمامات</a>
-            <a href="#garden">الحدائق</a>
+            <a href="rooms.html">غرف النوم</a>
+            <a href="reception.html">الاستقبال</a>
+            <a href="bathroom.html">الحمامات</a>
+            <a href="garden.html">الحدائق</a>
         </section>
 
         <section class="section gallery" id="room">
@@ -265,51 +42,7 @@
             <img src="https://images.unsplash.com/photo-1601927155784-6d0f63c6d536" alt="Room Image 5">
         </section>
 
-        <section class="section gallery" id="reception">
-            <h2>الاستقبال</h2>
-            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557b22f" alt="Reception Image 1">
-            <img src="https://images.unsplash.com/photo-1506748686214-e9f11f10f56f" alt="Reception Image 2">
-            <img src="https://images.unsplash.com/photo-1555685812-c5302f12392a" alt="Reception Image 3">
-            <img src="https://images.unsplash.com/photo-1555685812-dc51d4d5fbe1" alt="Reception Image 4">
-            <img src="https://images.unsplash.com/photo-1555685812-2b60e87eae67" alt="Reception Image 5">
-        </section>
-
-        <section class="section gallery" id="bathroom">
-            <h2>الحمامات</h2>
-            <img src="https://images.unsplash.com/photo-1567151752-9a5d46a6d3f5" alt="Bathroom Image 1">
-            <img src="https://images.unsplash.com/photo-1555685812-f0a160b1f9b6" alt="Bathroom Image 2">
-            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557b22f" alt="Bathroom Image 3">
-            <img src="https://images.unsplash.com/photo-1565679453-4602b19c7d8e" alt="Bathroom Image 4">
-            <img src="https://images.unsplash.com/photo-1537344817268-64d14f7f28e4" alt="Bathroom Image 5">
-        </section>
-
-        <section class="section gallery" id="garden">
-            <h2>الحدائق</h2>
-            <img src="https://images.unsplash.com/photo-1560155284-24cb279ae8d1" alt="Garden Image 1">
-            <img src="https://images.unsplash.com/photo-1549924220-99e16c26205d" alt="Garden Image 2">
-            <img src="https://images.unsplash.com/photo-1513755790008-b9787f0b73ee" alt="Garden Image 3">
-            <img src="https://images.unsplash.com/photo-1590988301271-5b2ad8e2a499" alt="Garden Image 4">
-            <img src="https://images.unsplash.com/photo-1564113884-c18faab5a38f" alt="Garden Image 5">
-        </section>
-
-        <section class="section testimonial-section">
-            <h2>آراء العملاء</h2>
-            <div class="testimonial">
-                <p>"لقد كانت تجربتنا مع SH Building & Decoration رائعة. فريق العمل محترف للغاية وكان التصميم النهائي يتجاوز توقعاتنا. شكرًا لكم!" - العميل الأول</p>
-            </div>
-            <div class="testimonial">
-                <p>"من بداية المشروع وحتى النهاية، كانت خدمة العملاء مذهلة. نحن ممتنون لفريق SH Building & Decoration على جهودهم وإبداعهم." - العميل الثاني</p>
-            </div>
-        </section>
-
-        <section class="section newsletter-form">
-            <h2>اشترك في النشرة الإخبارية</h2>
-            <p>ابق على اطلاع بأحدث مشاريعنا وأخبارنا.</p>
-            <form action="#">
-                <input type="email" placeholder="أدخل بريدك الإلكتروني">
-                <button type="submit">اشترك</button>
-            </form>
-        </section>
+        <!-- Additional sections here -->
 
         <section class="section contact-info">
             <h3>اتصل بنا</h3>
@@ -322,7 +55,89 @@
                 <a href="https://tiktok.com/@sh_building_decoration" class="fab fa-tiktok"></a>
             </div>
         </section>
+    </div>
 
+    <footer>
+        <p>&copy; 2024 SH Building & Decoration. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en], [data-ar]');
+            elements.forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH Building & Decoration</title>
+    <meta name="description" content="SH Building & Decoration هي شركة رائدة في الديكور والتصميم الداخلي تقدم حلول تصميم مبتكرة وشاملة.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SH Building & Decoration</h1>
+        <p>رائدة في مجال الديكور والتصميم الداخلي</p>
+    </header>
+
+    <div class="container">
+        <div class="lang-switcher">
+            <button onclick="setLanguage('ar')">عربي</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+
+        <section class="section" id="about">
+            <h2 data-en="About Us" data-ar="نبذة عن الشركة">نبذة عن الشركة</h2>
+            <p data-en="SH Building & Decoration is a leading company in the field of interior design and decoration, established with the goal of providing comprehensive and innovative design solutions to its clients. The company aims to achieve the perfect balance between beauty and functionality, focusing on delivering high-quality services that meet and exceed client expectations." data-ar="SH Building & Decoration هي شركة رائدة في مجال الديكور والتصميم الداخلي، تأسست بهدف تقديم حلول تصميمية متكاملة ومبتكرة لعملائها. تسعى الشركة إلى تحقيق التوازن المثالي بين الجمال والوظيفة، مع التركيز على تقديم خدمات عالية الجودة تلبي توقعات العملاء وتتفوق عليها."></p>
+        </section>
+
+        <section class="section gallery-links">
+            <h2>معرض الصور</h2>
+            <a href="rooms.html">غرف النوم</a>
+            <a href="reception.html">الاستقبال</a>
+            <a href="bathroom.html">الحمامات</a>
+            <a href="garden.html">الحدائق</a>
+        </section>
+
+        <section class="section gallery" id="room">
+            <h2>غرف النوم</h2>
+            <img src="https://images.unsplash.com/photo-1557682258-0e5e83bbf204" alt="Room Image 1">
+            <img src="https://images.unsplash.com/photo-1581091010185-d87c7d185776" alt="Room Image 2">
+            <img src="https://images.unsplash.com/photo-1592076510827-24d174b8c418" alt="Room Image 3">
+            <img src="https://images.unsplash.com/photo-1506748686214-5e03f96427e7" alt="Room Image 4">
+            <img src="https://images.unsplash.com/photo-1601927155784-6d0f63c6d536" alt="Room Image 5">
+        </section>
+
+        <!-- Additional sections here -->
+
+        <section class="section contact-info">
+            <h3>اتصل بنا</h3>
+            <p>الهاتف: <a href="tel:01020856651">01020856651</a></p>
+            <p>البريد الإلكتروني: <a href="mailto:shbuildinganddecoratin@gmail.com">shbuildinganddecoratin@gmail.com</a> | <a href="mailto:info@shbuilding.com">info@shbuilding.com</a></p>
+            <p>العنوان: القاهرة، نزلة المطار، شارع معرض هيونداي، أمام معرض المطار</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61561842359623&mibextid=kFxxJD" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/sh_building_decoration1?igsh=MWJpNDVmdzdqM2hlNg==" class="fab fa-instagram"></a>
+                <a href="https://tiktok.com/@sh_building_decoration" class="fab fa-tiktok"></a>
+            </div>
+        </section>
     </div>
 
     <footer>
