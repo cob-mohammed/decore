@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH Building & Decoration</title>
+    <meta name="description" content="SH Building & Decoration هي شركة رائدة في الديكور والتصميم الداخلي تقدم حلول تصميم مبتكرة وشاملة.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SH Building & Decoration</h1>
+        <p>رائدة في مجال الديكور والتصميم الداخلي</p>
+    </header>
+
+    <div class="container">
+        <div class="lang-switcher">
+            <button onclick="setLanguage('ar')">عربي</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+
+        <section class="section" id="about">
+            <h2 data-en="About Us" data-ar="نبذة عن الشركة">نبذة عن الشركة</h2>
+            <p data-en="SH Building & Decoration is a leading company in the field of interior design and decoration, established with the goal of providing comprehensive and innovative design solutions to its clients. The company aims to achieve the perfect balance between beauty and functionality, focusing on delivering high-quality services that meet and exceed client expectations." data-ar="SH Building & Decoration هي شركة رائدة في مجال الديكور والتصميم الداخلي، تأسست بهدف تقديم حلول تصميمية متكاملة ومبتكرة لعملائها. تسعى الشركة إلى تحقيق التوازن المثالي بين الجمال والوظيفة، مع التركيز على تقديم خدمات عالية الجودة تلبي توقعات العملاء وتتفوق عليها."></p>
+        </section>
+
+        <section class="section gallery-links">
+            <h2>معرض الصور</h2>
+            <a href="rooms.html">غرف النوم</a>
+            <a href="reception.html">الاستقبال</a>
+            <a href="bathroom.html">الحمامات</a>
+            <a href="garden.html">الحدائق</a>
+        </section>
+
+        <section class="section gallery" id="room">
+            <h2>غرف النوم</h2>
+            <img src="https://images.unsplash.com/photo-1557682258-0e5e83bbf204" alt="Room Image 1">
+            <img src="https://images.unsplash.com/photo-1581091010185-d87c7d185776" alt="Room Image 2">
+            <img src="https://images.unsplash.com/photo-1592076510827-24d174b8c418" alt="Room Image 3">
+            <img src="https://images.unsplash.com/photo-1506748686214-5e03f96427e7" alt="Room Image 4">
+            <img src="https://images.unsplash.com/photo-1601927155784-6d0f63c6d536" alt="Room Image 5">
+        </section>
+
+        <!-- Additional sections here -->
+
+        <section class="section contact-info">
+            <h3>اتصل بنا</h3>
+            <p>الهاتف: <a href="tel:01020856651">01020856651</a></p>
+            <p>البريد الإلكتروني: <a href="mailto:shbuildinganddecoratin@gmail.com">shbuildinganddecoratin@gmail.com</a> | <a href="mailto:info@shbuilding.com">info@shbuilding.com</a></p>
+            <p>العنوان: القاهرة، نزلة المطار، شارع معرض هيونداي، أمام معرض المطار</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61561842359623&mibextid=kFxxJD" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/sh_building_decoration1?igsh=MWJpNDVmdzdqM2hlNg==" class="fab fa-instagram"></a>
+                <a href="https://tiktok.com/@sh_building_decoration" class="fab fa-tiktok"></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SH Building & Decoration. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en], [data-ar]');
+            elements.forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SH Building & Decoration</title>
+    <meta name="description" content="SH Building & Decoration هي شركة رائدة في الديكور والتصميم الداخلي تقدم حلول تصميم مبتكرة وشاملة.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SH Building & Decoration</h1>
+        <p>رائدة في مجال الديكور والتصميم الداخلي</p>
+    </header>
+
+    <div class="container">
+        <div class="lang-switcher">
+            <button onclick="setLanguage('ar')">عربي</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+
+        <section class="section" id="about">
+            <h2 data-en="About Us" data-ar="نبذة عن الشركة">نبذة عن الشركة</h2>
+            <p data-en="SH Building & Decoration is a leading company in the field of interior design and decoration, established with the goal of providing comprehensive and innovative design solutions to its clients. The company aims to achieve the perfect balance between beauty and functionality, focusing on delivering high-quality services that meet and exceed client expectations." data-ar="SH Building & Decoration هي شركة رائدة في مجال الديكور والتصميم الداخلي، تأسست بهدف تقديم حلول تصميمية متكاملة ومبتكرة لعملائها. تسعى الشركة إلى تحقيق التوازن المثالي بين الجمال والوظيفة، مع التركيز على تقديم خدمات عالية الجودة تلبي توقعات العملاء وتتفوق عليها."></p>
+        </section>
+
+        <section class="section gallery-links">
+            <h2>معرض الصور</h2>
+            <a href="rooms.html">غرف النوم</a>
+            <a href="reception.html">الاستقبال</a>
+            <a href="bathroom.html">الحمامات</a>
+            <a href="garden.html">الحدائق</a>
+        </section>
+
+        <section class="section gallery" id="room">
+            <h2>غرف النوم</h2>
+            <img src="https://images.unsplash.com/photo-1557682258-0e5e83bbf204" alt="Room Image 1">
+            <img src="https://images.unsplash.com/photo-1581091010185-d87c7d185776" alt="Room Image 2">
+            <img src="https://images.unsplash.com/photo-1592076510827-24d174b8c418" alt="Room Image 3">
+            <img src="https://images.unsplash.com/photo-1506748686214-5e03f96427e7" alt="Room Image 4">
+            <img src="https://images.unsplash.com/photo-1601927155784-6d0f63c6d536" alt="Room Image 5">
+        </section>
+
+        <!-- Additional sections here -->
+
+        <section class="section contact-info">
+            <h3>اتصل بنا</h3>
+            <p>الهاتف: <a href="tel:01020856651">01020856651</a></p>
+            <p>البريد الإلكتروني: <a href="mailto:shbuildinganddecoratin@gmail.com">shbuildinganddecoratin@gmail.com</a> | <a href="mailto:info@shbuilding.com">info@shbuilding.com</a></p>
+            <p>العنوان: القاهرة، نزلة المطار، شارع معرض هيونداي، أمام معرض المطار</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61561842359623&mibextid=kFxxJD" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/sh_building_decoration1?igsh=MWJpNDVmdzdqM2hlNg==" class="fab fa-instagram"></a>
+                <a href="https://tiktok.com/@sh_building_decoration" class="fab fa-tiktok"></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SH Building & Decoration. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en], [data-ar]');
+            elements.forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
