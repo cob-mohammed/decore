@@ -1,0 +1,2 @@
+# decore
+decore static pages
